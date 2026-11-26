@@ -9,6 +9,6 @@ public class PengunjungCafe26 {
     }
 
     public static void main(String[] args) {
-        daftarPengunjung(5, "Ali", "Budi", "Citra", 5);
+        daftarPengunjung("Ali", "Budi");
     }
 }
