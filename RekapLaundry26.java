@@ -37,8 +37,7 @@ public class RekapLaundry26 {
         System.out.println();
 
         for (int i = 0; i < namaLayanan.length; i++) {
-            System.out.printf("%-15s Rp%-10d",
-                    namaLayanan[i], harga[i]);
+            System.out.printf("%-15s Rp%-10d", namaLayanan[i], harga[i]);
 
             for (int j = 0; j < hari.length; j++) {
                 System.out.printf("%-10d", data[i][j]);
@@ -113,13 +112,10 @@ public class RekapLaundry26 {
     }
 
     public static void main(String[] args) {
-
         int[][] data = new int[4][6];
 
         inputData(data);
-
         tampilkanData(data);
-
         layananTertinggi(data);
 
         int indeks = hariTersibuk(data);
