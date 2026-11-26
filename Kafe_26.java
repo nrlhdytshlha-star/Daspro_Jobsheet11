@@ -28,12 +28,16 @@ public class Kafe_26{
         Scanner sc = new Scanner(System.in);
 
         Menu("Andi", true);
+
         System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
         int pilihanMenu = sc.nextInt();
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = sc.nextInt();
-        int totalBayar = hitungTotalHarga26(pilihanMenu, banyakItem);
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
+
+        hitungTotalHarga26(pilihanMenu, banyakItem);
+
+        System.out.println("Proses perhitungan selesai");
+
         sc.close();
     }
 }
