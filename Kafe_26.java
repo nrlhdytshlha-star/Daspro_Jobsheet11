@@ -28,14 +28,27 @@ public class Kafe_26{
         Scanner sc = new Scanner(System.in);
 
         Menu("Andi", true);
+        int totalKeseluruhan = 0;
+        String pesanLagi;
 
-        System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
-        int pilihanMenu = sc.nextInt();
-        System.out.print("Masukkan jumlah item yang ingin dipesan: ");
-        int banyakItem = sc.nextInt();
-        int totalBayar = 
-        hitungTotalHarga26(pilihanMenu, banyakItem);
-        System.out.println("Total harga untuk pesanan Andi: Rp" + totalBayar);
-        sc.close();
+        do{
+            System.out.print("\nMasukkan nomor mnu yang ingin Anda pesan: ");
+            int pilihanMenu = sc.nextInt();
+
+            if (pilihanMenu < 1 || pilihanMenu >6){
+                System.out.println("Menu tidak tersedia");
+            } else {
+                System.out.print("Masukkan jumlah item yang ingin dipesan: ");
+                int banyakItem = sc.nextInt();
+                int subtotal = hitungTotalHarga26(pilihanMenu, banyakItem);
+                totalKeseluruhan += subtotal;
+            }
+
+            System.out.print("Apakah ingin memesan menu lain (y/n)? ");
+            pesanLagi = sc.next();
+        } while (pesanLagi.equalsIgnoreCase("y"));
+
+        System.out.print("Total keseluruhan pesanan Anda: Rp" + totalKeseluruhan);
+
     }
 }
